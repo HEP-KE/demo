@@ -71,7 +71,7 @@ def nu_mass(sum_mnu_eV=0.10, N_species=1):
     return p
 
 
-def wCDM(w0=-0.9, Omega_fld=0.7):
+def wCDM(w0=-0.9):
     """
     Dark energy with constant equation of state parameter w0.
 
@@ -80,19 +80,18 @@ def wCDM(w0=-0.9, Omega_fld=0.7):
 
     Args:
         w0: Dark energy equation of state (default: -0.9)
-        Omega_fld: Dark energy density parameter (default: 0.7)
 
     Papers:
         - Chevallier-Polarski parametrization: https://arxiv.org/abs/gr-qc/0009008
         - Linder review: https://arxiv.org/abs/astro-ph/0208512
+
+    Note: Returns a dict with special 'w0_approx' key for post-processing if CLASS
+          doesn't support fluid dark energy.
     """
     p = base_params()
-    p.update({
-        'Omega_fld': Omega_fld,
-        'w0_fld': w0,
-        'wa_fld': 0.0,
-        'use_ppf': 'yes',
-    })
+    # Store w0 for approximate scaling if CLASS doesn't support w0_fld
+    p['_w0_approx'] = w0
+
     return p
 
 

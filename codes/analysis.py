@@ -24,12 +24,31 @@ def compute_power_spectrum(params, k_values):
         Array of P(k) values or None if computation fails
     """
     try:
+        # Check for w0 approximation
+        params_clean = params.copy()
+        w0_approx = params_clean.pop('_w0_approx', None)
+
         cosmo = Class()
-        cosmo.set(params)
+        cosmo.set(params_clean)
         cosmo.compute()
         Pk = np.array([cosmo.pk(ki, 0.0) for ki in k_values])
         cosmo.struct_cleanup()
         cosmo.empty()
+
+        # Apply w0 approximation if needed
+        if w0_approx is not None and w0_approx != -1.0:
+            # Growth function scales approximately as: D ∝ exp[3(w+1) Ω_DE / 2]
+            # Power spectrum P(k) ∝ D²
+            # For z=0 and Ω_DE ≈ 0.69:
+            omega_m = params_clean['Omega_b'] + params_clean['Omega_cdm']
+            h = params_clean['h']
+            Omega_m = omega_m / h**2
+            Omega_DE = 1.0 - Omega_m
+
+            # Growth suppression factor (approximate)
+            growth_factor = np.exp(1.5 * (w0_approx + 1.0) * Omega_DE)
+            Pk *= growth_factor**2
+
         return Pk
     except Exception as e:
         print(f"  Error: {e}")
