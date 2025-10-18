@@ -59,7 +59,7 @@ def plot_power_spectra(k_theory, model_results, k_obs, Pk_obs, σPk_obs,
             ax1.loglog(k_theory, Pk_model,
                       color=color,
                       linestyle=linestyle,
-                      linewidth=2.5,
+                      linewidth=1.5,
                       label=model_name,
                       alpha=0.9)
 
@@ -93,7 +93,7 @@ def plot_power_spectra(k_theory, model_results, k_obs, Pk_obs, σPk_obs,
                 ax2.semilogx(k_theory, ratio,
                            color=color,
                            linestyle=linestyle,
-                           linewidth=2.5,
+                           linewidth=1.5,
                            alpha=0.9)
 
         # Compute ΛCDM theory at observed k points for ratio
@@ -111,7 +111,7 @@ def plot_power_spectra(k_theory, model_results, k_obs, Pk_obs, σPk_obs,
                         markeredgewidth=1.5)
 
         # Reference line at 1
-        ax2.axhline(y=1, color='black', linestyle='-', linewidth=2.5, alpha=0.9)
+        ax2.axhline(y=1, color='black', linestyle='-', linewidth=1.5, alpha=0.9)
 
     # Formatting bottom panel
     ax2.set_xlabel('k [h/Mpc]', fontsize='x-large')
@@ -145,8 +145,10 @@ def plot_suppression_ratios(k_values, suppression_ratios, reference_model='ΛCDM
     
     # Define colors for different models
     colors = {
+        'ΛCDM + Σmν=0.06 eV': 'cyan',
         'ΛCDM + Σmν=0.10 eV': 'blue',
         'wCDM (w0=-0.9)': 'red',
+        'wCDM (w0=-1.1)': 'darkred',
         'Thermal WDM (all DM, m=3 keV)': 'green',
         'CWDM (f_wdm=0.2, m=3 keV, g*=100)': 'orange',
         'ETHOS IDM–DR (fiducial)': 'purple',
@@ -158,7 +160,7 @@ def plot_suppression_ratios(k_values, suppression_ratios, reference_model='ΛCDM
         color = colors.get(model_name, 'gray')
         plt.semilogx(k_values, ratio, 
                     color=color, 
-                    linewidth=2.5, 
+                    linewidth=1.5, 
                     label=model_name, 
                     alpha=0.9)
     
@@ -175,14 +177,14 @@ def plot_suppression_ratios(k_values, suppression_ratios, reference_model='ΛCDM
     plt.title(f'Power Spectrum Suppression Relative to {reference_model}', fontsize='x-large')
     plt.legend(loc='best', fontsize='x-large', framealpha=0.95)
     plt.xlim(1e-3, 20)
-    plt.ylim(0, 1.2)
+    plt.ylim(0.3, 1.3)
     # plt.grid(True, alpha=0.3)
     plt.tight_layout()
 
     # Save figure if path provided
     if save_path is not None:
         plt.savefig(save_path, dpi=150, bbox_inches='tight')
-    plt.show()
+    # plt.show()
 
     return plt.gcf()
 
@@ -248,7 +250,7 @@ def plot_model_comparison_grid(k_values, model_results, reference_model='ΛCDM',
     # Save figure if path provided
     if save_path is not None:
         plt.savefig(save_path, dpi=150, bbox_inches='tight')
-    plt.show()
+    # plt.show()
 
     return fig
 
@@ -307,6 +309,6 @@ def plot_scale_dependent_effects(k_values, model_results,
     plt.tight_layout()
     if save_path is not None:
         plt.savefig(save_path, dpi=150, bbox_inches='tight')
-    plt.show()
+    # plt.show()
 
     return fig
