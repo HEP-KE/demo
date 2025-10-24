@@ -1,0 +1,42 @@
+{
+  "description": {
+    "type": "primitive",
+    "value": "Observational data from eBOSS DR14 Lyman-alpha forest."
+  },
+  "data_source": {
+    "type": "primitive",
+    "value": "eBOSS DR14 Lyman-alpha forest"
+  },
+  "data_file_original": {
+    "type": "primitive",
+    "value": "data/DR14_pm3d_19kbins.txt"
+  },
+  "number_of_bins": {
+    "type": "primitive",
+    "value": 19
+  },
+  "redshift_bins_filepath": {
+    "type": "primitive",
+    "value": "/Users/celsloaner/Documents/test_demo/demo/agent-output/eboss_dr14_lya_forest_redshift_bins.npy"
+  },
+  "measured_quantity_filepath": {
+    "type": "primitive",
+    "value": "/Users/celsloaner/Documents/test_demo/demo/agent-output/eboss_dr14_lya_forest_measured_quantity.npy"
+  },
+  "errors_filepath": {
+    "type": "primitive",
+    "value": "/Users/celsloaner/Documents/test_demo/demo/agent-output/eboss_dr14_lya_forest_errors.npy"
+  },
+  "column_interpretation": {
+    "type": "primitive",
+    "value": {
+      "array_0": "Redshift (z) or comoving distance (r) bins",
+      "array_1": "Measured quantity (e.g., correlation function xi(r) or power spectrum P(k))",
+      "array_2": "Errors/uncertainties on the measured quantity"
+    }
+  },
+  "notes": {
+    "type": "primitive",
+    "value": "The exact physical interpretation of 'measured_quantity' and 'redshift_bins' (e.g., correlation function vs. power spectrum, r vs. z) should be confirmed with the original eBOSS DR14 documentation. Based on common Lya forest data formats, these are the most likely interpretations."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "\u039bCDM": {
+    "type": "array",
+    "path": "/Users/celsloaner/Documents/test_demo/demo/agent-output/cosmological_power_spectra_\u039bCDM.npy"
+  },
+  "\u039bCDM + \u03a3m\u03bd=0.10 eV": {
+    "type": "array",
+    "path": "/Users/celsloaner/Documents/test_demo/demo/agent-output/cosmological_power_spectra_\u039bCDM_+_\u03a3m\u03bd_0.10_eV.npy"
+  },
+  "wCDM (w0=-0.9)": {
+    "type": "array",
+    "path": "/Users/celsloaner/Documents/test_demo/demo/agent-output/cosmological_power_spectra_wCDM_w0_-0.9.npy"
+  }
+}
