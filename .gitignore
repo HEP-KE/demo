@@ -4,3 +4,8 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+agent-output/*.json
+agent-output/*.npy
+agent-output/*.png
+.claude/
+
