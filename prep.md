@@ -40,7 +40,7 @@ pip install smolagents[openai] numpy scipy matplotlib classy pandas
 - Click on "Create API key" on the top right. Create a trial project to associate the key with a project (These can be edited/deleted)
 <img width="1512" height="603" alt="Screenshot 2025-10-27 at 10 03 00" src="https://github.com/user-attachments/assets/73ac39b7-4067-46ae-ac8c-ab3b17a2ff8f" />
 
-- Keep the API key accessible for the session. 
+- Keep the API key accessible (save it locally)
 <img width="1512" height="603" alt="Screenshot 2025-10-27 at 10 06 06" src="https://github.com/user-attachments/assets/d44bc58c-6873-48c7-85ae-49f540f5d01a" />
 Note: Do not set up billing associated with this key. If you run out of free tokens, they get replenished later in the free tier. 
 
