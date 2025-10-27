@@ -44,7 +44,14 @@ pip install smolagents[openai] numpy scipy matplotlib classy pandas
 <img width="1512" height="603" alt="Screenshot 2025-10-27 at 10 06 06" src="https://github.com/user-attachments/assets/d44bc58c-6873-48c7-85ae-49f540f5d01a" />
 Note: Do not set up billing associated with this key. If you run out of free tokens, they get replenished later in the free tier. 
 
-### 3. Demo Repository Setup (for the hands-on day)
+
+### 3. [Optional] Reading
+- Smolagents launch post by HuggingFace: <https://huggingface.co/blog/smolagents> and a short tutorial: <https://huggingface.co/learn/agents-course/unit1/tutorial>
+- Smolagents repository: <https://github.com/huggingface/smolagents>
+- Simple first-agent guide: <https://www.nb-data.com/p/getting-started-with-huggingface>
+
+
+### 4. Demo Repository Setup (for the hands-on session)
 
 **Clone the demo repository:**
 ```bash
@@ -59,11 +66,4 @@ jupyter notebook
 # or
 jupyter lab
 ```
-**Open demo.ipynb or demo_multiagent.ipynb 
-
-### 4. Optional Reading
-- Smolagents launch post by HuggingFace: <https://huggingface.co/blog/smolagents> and a short tutorial: <https://huggingface.co/learn/agents-course/unit1/tutorial>
-- Smolagents repository: <https://github.com/huggingface/smolagents>
-- Simple first-agent guide: <https://www.nb-data.com/p/getting-started-with-huggingface>
-
----
+Finally, Open demo.ipynb and demo_multiagent.ipynb
