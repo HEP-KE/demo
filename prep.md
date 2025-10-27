@@ -44,13 +44,14 @@ pip install smolagents[openai] numpy scipy matplotlib classy pandas
 <img width="1512" height="603" alt="Screenshot 2025-10-27 at 10 06 06" src="https://github.com/user-attachments/assets/d44bc58c-6873-48c7-85ae-49f540f5d01a" />
 Note: Do not set up billing associated with this key. If you run out of free tokens, they get replenished later in the free tier. 
 
-### 3. Demo Repository Setup
+### 3. Demo Repository Setup (for the hands-on day)
 
 **Clone the demo repository:**
 ```bash
 git clone https://github.com/HEP-KE/demo.git
 cd demo
 ```
+Note: This repository may change regularly, so pull from `git pull` often. 
 
 **Start Jupyter from the project directory:**
 ```bash
@@ -58,6 +59,7 @@ jupyter notebook
 # or
 jupyter lab
 ```
+**Open demo.ipynb or demo_multiagent.ipynb 
 
 ### 4. Optional Reading
 - Smolagents launch post by HuggingFace: <https://huggingface.co/blog/smolagents> and a short tutorial: <https://huggingface.co/learn/agents-course/unit1/tutorial>
