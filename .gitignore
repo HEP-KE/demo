@@ -8,4 +8,6 @@ agent-output/*.json
 agent-output/*.npy
 agent-output/*.png
 .claude/
-
+agent-output/**/*.json
+agent-output/**/*.npy
+agent-output/**/*.png
